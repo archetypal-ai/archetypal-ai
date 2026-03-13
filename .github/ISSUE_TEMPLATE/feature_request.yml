@@ -1,0 +1,31 @@
+name: Feature Request
+description: Suggest a feature for Archetypal AI
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "What would you like to see added or changed?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: "How would this feature improve your workflow?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Nice to have
+        - Important
+        - Critical
+    validations:
+      required: true
