@@ -26,14 +26,15 @@ Archetypal AI is an agentic coding assistant that lives in your terminal. Unlike
 ## Install
 
 ```bash
-# macOS / Linux / WSL (recommended)
+# npm via GitHub Packages (recommended)
+npm install -g @archetypal-ai/cli --registry=https://npm.pkg.github.com
+
+# macOS / Linux / WSL
 curl -fsSL https://archetypal.ai/install.sh | bash
 
-# npm (alternative)
-npm install -g @archetypal-ai/cli
-
 # Homebrew (macOS)
-brew install archetypal-ai/tap/archetypal
+brew tap archetypal-ai/tap
+brew install archetypal
 ```
 
 ## Quick Start

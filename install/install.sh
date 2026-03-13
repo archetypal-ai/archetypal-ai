@@ -77,14 +77,20 @@ install() {
   # Ensure install directory exists
   mkdir -p "$INSTALL_DIR"
 
-  # For now, install via npm (binary distribution comes later)
+  # Install via GitHub Packages npm registry
   if command -v npm &>/dev/null; then
-    info "  Installing via npm..."
-    npm install -g @archetypal-ai/cli 2>/dev/null || true
+    info "  Installing via npm (GitHub Packages)..."
+    npm install -g @archetypal-ai/cli --registry=https://npm.pkg.github.com 2>&1 || {
+      info "  Retrying with npmjs.org..."
+      npm install -g @archetypal-ai/cli 2>/dev/null || true
+    }
     success "Installed archetypal CLI"
   elif command -v pnpm &>/dev/null; then
-    info "  Installing via pnpm..."
-    pnpm add -g @archetypal-ai/cli 2>/dev/null || true
+    info "  Installing via pnpm (GitHub Packages)..."
+    pnpm add -g @archetypal-ai/cli --registry=https://npm.pkg.github.com 2>&1 || {
+      info "  Retrying with npmjs.org..."
+      pnpm add -g @archetypal-ai/cli 2>/dev/null || true
+    }
     success "Installed archetypal CLI"
   else
     error "npm or pnpm is required. Install Node.js 20+ first: https://nodejs.org"
