@@ -8,7 +8,7 @@
 
 **An agentic coding tool powered by a living AI civilization.**
 
-[![Release](https://img.shields.io/github/v/release/archetypal-ai/archetypal?style=for-the-badge&color=cyan)](https://github.com/archetypal-ai/archetypal/releases)
+[![Release](https://img.shields.io/github/v/release/archetypal-ai/archetypal?style=for-the-badge&color=cyan)](https://github.com/archetypal-ai/archetypal-ai/releases)
 [![License](https://img.shields.io/badge/license-proprietary-333?style=for-the-badge)](LICENSE.md)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-339933?style=for-the-badge&logo=node.js)](https://nodejs.org)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/archetypal-ai)
