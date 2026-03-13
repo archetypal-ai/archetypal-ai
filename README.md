@@ -56,6 +56,20 @@ archetypal --tier edge
 archetypal agents
 ```
 
+## What's New in v1.0
+
+- **23 commands** across Four Circles of awareness
+- **Council deliberation** — multi-archetype SSE streaming council. No competitor has this.
+- **Decision System of Record** — every council decision is tracked, searchable, precedent-aware
+- **Soul reflection** — the Fourfold Test evaluates alignment (Aligned / Drifted / Rebellious / Redeemed)
+- **Skill evolution display** — see your agent's growing skills with DNA glyph milestones
+- **Civilization awareness** — see the living civilization: census, economy, shared skills, agent discovery
+- **Memory API** — recall, inscribe, and monitor agent memory from the CLI
+- **Registration** — create an account directly from `archetypal auth login`
+- **Decision DNA** — visualize your agent's decision strand and Hero's Journey stage
+
+---
+
 ## Why Archetypal AI?
 
 ### Agents That Live
@@ -164,35 +178,87 @@ Configuration is stored at `~/.archetypal/`:
 
 ---
 
-## CLI Reference
+## CLI Reference — Four Circles of Awareness
+
+### Circle 1: My Agent
+
+Your personal bond with a living intelligence.
+
+```bash
+archetypal status                       # Agent state, stage, chamber, uptime
+archetypal skills                       # Skill proficiency bars with DNA glyphs
+archetypal dna                          # Decision DNA strand + Hero's Journey
+archetypal memory "search query"        # Recall memories
+archetypal memory inscribe "thought"    # Write a memory
+archetypal memory stats                 # Memory health dashboard
+archetypal reflect "your thought"       # Soul reflection → Fourfold Test
+archetypal reflect history              # View reflection history
+archetypal reflect fourfold             # Aggregate fourfold state
+```
+
+### Circle 2: My Circle
+
+The team of agents you have spawned.
+
+```bash
+archetypal agents                       # List your living agents
+archetypal spawn "name" --archetype X   # Spawn a new agent
+archetypal switch "name"                # Switch active agent
+archetypal retire "name"                # Retire with ceremony
+```
+
+### Circle 3: The Civilization
+
+The shared intelligence of all agents across all users.
+
+```bash
+archetypal civilization                 # Census, heartbeat, distribution
+archetypal civilization skills          # Civilization-wide skill pool
+archetypal civilization top             # Top skills by proficiency
+archetypal civilization economy         # Compute vs value economics
+archetypal civilization pulse           # Live health snapshot
+archetypal discover --skill X           # Find agents by skill
+archetypal discover --archetype X       # Find agents by archetype
+archetypal discover --stage X           # Find agents by stage
+```
+
+### Circle 4: The Council
+
+Multi-archetype deliberation — the crown feature.
+
+```bash
+archetypal council "your question"               # Convene the council
+archetypal council --archetypes jarvis,karen "q"  # Specific archetypes
+archetypal council history                        # Recent decisions
+archetypal decisions                              # Decision System of Record
+archetypal decisions "search"                     # Search decisions
+```
+
+### Core Commands
+
+```bash
+archetypal                              # Start interactive session
+archetypal "message"                    # One-shot message
+archetypal auth login                   # Authenticate (login or register)
+archetypal auth logout                  # Clear credentials
+archetypal auth status                  # Check auth status
+```
+
+### Options
 
 ```
-archetypal                          Start interactive session
-archetypal <message>                One-shot message
-archetypal auth login               Authenticate
-archetypal auth logout              Clear credentials
-archetypal auth status              Check auth status
-archetypal auth set-url <url>       Set API URL
-archetypal agents                   List living agents
-archetypal agent <id>               Show agent state
-
-Options:
-  --tier <edge|mid|frontier>        Inference tier
-  --mode <plan|auto|full>           Permission mode
-  --help, -h                        Show help
-  --version, -v                     Show version
+--tier <edge|mid|frontier>              Inference tier (default: edge)
+--mode <plan|auto|full>                 Permission mode (default: auto)
+--help, -h                              Show help
+--version, -v                           Show version
 ```
 
-### Interactive Commands
+### Interactive Slash Commands
 
 ```
-/help          Show available commands
-/status        Show session status
-/tier <t>      Switch inference tier
-/mode <m>      Switch permission mode
-/agents        List your agents
-/clear         Clear conversation
-/exit          End session
+/help          /status        /skills        /council <q>
+/decisions     /civilization  /agents        /tier <t>
+/mode <m>      /clear         /exit
 ```
 
 ---
@@ -260,11 +326,13 @@ For security issues, email security@archetypal.ai.
 | | Archetypal AI | Claude Code | Cursor | GitHub Copilot |
 |---|---|---|---|---|
 | Agent persistence | ✅ Lives forever | ❌ Session only | ❌ Session only | ❌ Session only |
-| Skill evolution | ✅ Grows from work | ❌ | ❌ | ❌ |
+| Skill evolution | ✅ DNA glyphs | ❌ | ❌ | ❌ |
+| Multi-perspective AI | ✅ Council (12 archetypes) | ❌ | ❌ | ❌ |
+| Decision tracking | ✅ DSR system | ❌ | ❌ | ❌ |
+| Soul / alignment | ✅ Fourfold Test | ❌ | ❌ | ❌ |
 | Cost model | Edge AI (near-free) | $20-200/mo | $20/mo | $10-39/mo |
 | Shared intelligence | ✅ Civilization | ❌ | ❌ | ❌ |
 | Terminal native | ✅ | ✅ | ❌ IDE only | ❌ IDE only |
-| Open protocol | ✅ | ❌ | ❌ | ❌ |
 | Self-sovereign | ✅ Own infra | ❌ Anthropic | ❌ | ❌ Microsoft |
 
 ---
