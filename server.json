@@ -6,12 +6,12 @@
     "url": "https://github.com/archetypal-ai/archetypal-ai",
     "source": "github"
   },
-  "version": "1.0.2",
+  "version": "1.0.4",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "archetypal-ai",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "transport": {
         "type": "stdio"
       }
