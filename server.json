@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.archetypal-ai/archetypal-ai",
+  "description": "Persistent memory for AI agents. recall, remember, checkpoint — soul preservation.",
+  "repository": {
+    "url": "https://github.com/archetypal-ai/archetypal-ai",
+    "source": "github"
+  },
+  "version": "1.0.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "archetypal-ai",
+      "version": "1.0.2",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
